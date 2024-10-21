@@ -1,0 +1,362 @@
+/* Genel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Raleway'; /* Varsayılan yazı tipi */
+}
+
+
+/* Arka plan rengi için soft bir ton ayarlandı */
+.full-screen-image {
+    background-image: url('img/Desktop - 2 .png'); /* Görselin doğru yolunu ekleyin */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    max-width: 100%; /* Kartların ekranı aşmamasını sağlar */
+
+}
+
+.overlay-text {
+    color: rgb(200, 237, 244);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Başlık ve alt başlık ayarları */
+h1 {
+    font-family: 'Poppins';
+    font-size: 2.5rem; /* Gerekirse boyutu ayarlayın */
+}
+
+
+h3 {
+    font-family: 'Raleway';
+    font-size: 1.5rem; /* Gerekirse boyutu ayarlayın */
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%; /* Menü genişliği */
+    height: 100%;
+    background: rgba(146, 187, 194, 0.694); /* Transparan beyaz arka plan */
+    transform: translateX(-100%); /* Başlangıçta görünmez */
+    transition: transform 0.3s ease; /* Kaydırma animasyonu */
+    z-index: 4; /* Arka planın üstünde, ama hamburgerin altında */
+    display: flex;
+    flex-direction: column; /* Alt alta sıralanacak */
+    justify-content: center; /* Ortalamak için */
+    align-items: center; /* Ortalamak için */
+}
+
+.menu.open {
+    transform: translateX(0); /* Açıldığında görünür hale gelsin */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Tam genişlik */
+}
+
+.menu ul li {
+    padding: 15px; /* Menü öğeleri arası boşluk */
+    text-align: center; /* Metinleri ortala */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #042434; /* Yazı rengi */
+    display: block; /* Tıklanabilir alanı artır */
+    font-size: 1.5rem; /* H3 başlığı gibi boyut ayarı (gerekirse değiştirin) */
+    font-family: 'Raleway'; /* H3 başlığındaki font ailesi */
+    margin: 0; /* H3 gibi boşluk kalmasın */
+}
+
+/* Arka plan için geçiş efekti */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Başlangıçta görünmez */
+    visibility: hidden; /* Başlangıçta görünmez */
+    transition: opacity 0.3s ease; /* Geçiş efekti */
+    z-index: 3; /* Menüden bir alt seviyede */
+}
+
+.menu.open ~ .backdrop {
+    opacity: 1; /* Menü açıldığında görünür hale gelsin */
+    visibility: visible; /* Menü açıldığında görünür hale gelsin */
+}
+
+
+
+/* Form alanı stili */
+#contact-form {
+    width: 90%; /* Genişliğin %90'ı */
+    max-width: 500px; /* Maksimum genişlik */
+    background-color: rgb(215, 154, 151);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(95, 5, 100, 0.467);
+    margin: auto; /* Ortalamak için */
+    
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    color: #350767;
+    font-family: 'Raleway';
+    font-size: 18px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f3ebeb;
+    transition: border 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border: 1px solid #ede7e7;
+}
+
+form textarea {
+    resize: none; /* Boyutlandırmayı devre dışı bırakır */
+    height: 250px; /* Yüksekliği sabitler, istediğiniz değeri koyabilirsiniz */
+    padding: 10px; /* İç dolgu alanı */
+    border: 1px solid #ddd; /* Kenar çizgisi */
+    border-radius: 4px; /* Kenar yuvarlaklığı */
+    outline: none; /* Odaklandığında kenar çizgisi görünmesini engeller */
+}
+
+button {
+    background-color: #600c6e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Raleway';
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a0f66;
+}
+
+/* index.html footer stili */
+.index-footer {
+    color: #153c73;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 100%; /* Tüm genişliği kapla */
+}
+
+/* iletisim.html footer stili */
+.iletisim-footer {
+    color: #582287;
+    text-align: center;
+    position: absolute; /* Footer'ı sabitlemek için absolute kullanın */
+    bottom: 0; /* Sayfanın en altına yerleştir */
+    width: 100%; /* Tüm genişliği kapla */
+    padding: 10px;
+
+}
+
+/* Ekstil ayarları */
+.hidden {
+    display: none;
+}
+
+.container {
+    padding: 10px;
+    margin-top: 20px; /* Üstten boşluk eklemek için */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.card {
+    margin: 8px;
+    width: auto;
+    flex: 1;
+    margin-top: 15px; /* Kart ile diğer içerikler arasında boşluk */
+
+}
+
+
+
+.col-md-6,
+.col-md-4 {
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak hizala */
+    width: 250px;
+    height: auto;
+}
+
+
+.card-body {
+    display: inline-block;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    color: rgb(13, 86, 98);
+
+}
+
+.row {
+    margin-bottom: 10px; /* İstediğin değere göre ayarla */
+}
+
+
+
+
+.sticky-top {
+    position: fixed;
+    right: 0; /* Sağ taraftan tam sıfırda yerleştir */
+    width: auto; /* Genişliği %100 yap */
+    max-width: 360px; /* İsteğe bağlı olarak maksimum genişlik belirle */
+}
+
+.güncel-durumlar {
+    font-family: 'Poppins';
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #0e3265;
+    transition: transform 0.3s ease; /* Geçiş efekti için */
+    transition: transform
+
+
+
+
+
+
+}
+
+.güncel-durumlar:hover {
+    transform: scale(1.1); /* Hover sırasında %10 büyüme */
+}
+
+
+
+
+.card-title {
+    text-align: left; /* Başlığı sola hizala */
+    font-size: 1.1rem; /* Başlık boyutunu küçültün */
+    line-height: 1.2; /* Satır yüksekliği */
+    font-family: 'Poppins';
+    font-weight: bolder;
+}
+
+.card-text {
+    text-align: left; /* Metni sola hizala */
+    color: #153c73;
+    font-size: 1rem; /* Metin boyutunu küçültün */
+    line-height: 1.2; /* Satır yüksekliği */
+    font-family: 'Raleway';
+}
+
+h4, h5 {
+    color: #0e3265 !important; /* Renk değişimi için öncelik */
+}
+
+h6{
+    font-size: 1.8rem; /* Başlık boyutu */
+    margin-top: 10px;
+    margin-bottom: 18px; /* Alt boşluk */
+    text-align: center;
+    color: #600c6e;
+    font-family: 'Poppins';
+}
+
+.blog-image {
+    position: relative; /* Yazıyı konumlandırmak için */
+    margin-left: auto; /* Ortalamak için otomatik sağ ve sol boşluk */
+    margin-right: auto; /* Ortalamak için otomatik sağ ve sol boşluk */
+    width: 100%; /* Görselin genişliğini %50 yapar */
+    max-width: 480px; /* Maksimum genişliği 250px ile sınırlar */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.blog-image img {
+    width: 80%; /* Görselin genişliğini %100 yapar */
+    height: auto; /* Yüksekliği otomatik ayarlayarak orantıyı korur */
+    object-fit: cover; /* Görselin kesilmeden sığmasını sağlar */
+}
+
+.highlight {
+    margin-top: -50px;
+    color: #0c2d6e; /* Metin rengi */
+    font-size: 1.7rem; /* Metin boyutu */
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none; /* Altı çizgi kaldır */
+    transition: transform 0.3s ease; /* Geçiş efekti için */
+
+}
+
+.highlight:hover {
+    transform: scale(1.1); /* Büyüme efekti */
+}
+
+
+/* Card bileşenlerinin stil ayarları */
+.box-categories .card {
+    width: 80%; /* Kartın genişliğini tam genişlik yap */
+    max-width: 300px; /* Maksimum genişlik sınırı */
+    margin: 0 auto; /* Kartları ortalamak için */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+    border: none; /* Kartın sınırlarını kaldır */
+    background-color: transparent; /* Arka planı şeffaf yap */
+}
+
+/* Sadece section içindeki kartlar için hover etkisi */
+.box-categories .card:hover {
+    transform: scale(1.05); /* Hover sırasında %5 büyüme */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge */
+}
+
+/* Kartın üst kısmındaki görselin stil ayarları */
+.card-img-top {
+    width: 90%; /* Görselin kartın genişliğine tam oturmasını sağlar */
+    height: 240px; /* Belirli bir yükseklik ayarlamak için */
+    object-fit: cover; /* Görselin kesilmeden sığmasını sağlar */
+}
+
+
+

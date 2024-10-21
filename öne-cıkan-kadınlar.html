@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            color: #153c73;
+        }
+
+        body {
+            background-color: #ddf2ff;
+            font-family: 'Poppins';
+        }
+        h1{
+            text-align: center;
+            font-family: 'Raleway';
+            color: #153c73;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+        .timeline {
+            background-image: url(img/international-women-s-day-celebration-equal-right-digital-art-style_23-2151368438.jpeg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px; /* Genişlik ayarlandı */
+            margin: 0 auto; /* Merkezleme için */
+            padding: 50px 0; 
+        }
+
+        .container {
+            width: 18%;
+            height: 410px;
+            margin: 1%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 15px;
+            font-size: 18px;
+            font-family: 'Raleway';
+            color: #1b4a65;
+            
+        }
+
+        @media screen and (max-width: 800px) {
+            .container {
+                width: 45%; 
+            }
+
+            .chart-container {
+               flex-direction: column; /* Mobilde alt alta gelsin */
+               align-items: center;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%; 
+            }
+        }
+
+        .blog-post {
+            text-align: center;
+            font-size: 18px;
+            margin: 0 auto; /* Ortalamak için otomatik yan boşluk */
+            margin-bottom: 2rem; 
+            width: 650px;
+            height: auto; /* Yüksekliği otomatik ayarlayın */
+            padding: 20px;
+            background-color: #ffffff; /* Beyaz arka plan */
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            display: flex; /* Flexbox düzeni kullanıyoruz */
+            justify-content: space-between; /* Boşluğu eşit dağıt */
+            align-items: center; /* Dikey olarak ortala */
+            margin-top: 20px; /* Üstte boşluk bırak */
+            margin-right: 10px; /* Sağ tarafa bir boşluk ekleyelim */
+
+        }
+
+
+        #myPieChart{
+            max-width: 500px; /* İsterseniz burada maksimum genişliği ayarlayabilirsiniz */
+            max-height: 500px; /* İsterseniz burada maksimum yüksekliği ayarlayabilirsiniz*/
+            flex: 1;
+            margin: 20px auto; /* Ortalamak için */
+        
+        }
+
+
+        .flip-card-container {
+            display: flex; /* Flexbox düzeni kullanıyoruz */
+            justify-content: flex-end; /* Kartları sağ tarafa hizala */
+            margin-top: 20px; /* Kartlar ile üstteki içerik arasında boşluk bırak */
+            margin-right: 12px; /* Sağ tarafla araya boşluk ekle */
+        }
+
+        .flip-card {
+             background-color: transparent;
+             width: 250px;  /* Kart genişliğini küçült */
+             height: 300px; /* Kart yüksekliğini küçült */
+             perspective: 1000px;
+             margin-left: 10px; /* Kartlar arasında boşluk */
+        }
+
+        .flip-card-front img, .flip-card-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Görüntülerin orijinal oranlarını korur */
+        }
+
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            transform: rotateY(180deg);
+        }
+
+
+
+        .right-sidebar {
+            display: flex;
+            flex-wrap: wrap; /* Satırı doldurduktan sonra alta geçmeyi sağlar */
+            justify-content: space-between; /* Boşluğu eşit dağıtır */
+            gap: 1rem; /* Kartlar arasında boşluk bırakır */
+            width: 100%; /* Sağ sidebar genişliği ayarlanır */
+        }
+
+        .blog-post2 {
+            background-color: #ffffff;
+            padding: 1.2rem;
+            margin: 20px auto 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            width: 44%; /* İki kolon halinde yerleşim için genişliği %48 yaptık */
+            box-sizing: border-box; /* Padding ve border ile doğru boyutlandırma sağlar */
+        }
+
+@media screen and (max-width: 800px) {
+    .blog-post2 {
+        width: 100%; /* Mobilde tam genişlik alır */
+    }
+}
+
+        .blog-post2 h3 {
+            font-weight: bold;
+            color: #153c73; /* Başlık rengi */
+            font-size: 20px;
+        }
+
+        .index-footer {
+            color: #153c73;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative; /* absolute yerine relative kullanalım */
+            bottom: 0;
+            margin-top: 35px; /* Yukarıda biraz boşluk bırakalım */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    
+    <h1>Kadınlarımızın Teknolojideki Görünmez Yüzü</h1>
+    <br>
+
+    <div class="timeline">
+        <div class="container">
+            <div class="content">
+                <h2>1800'ler</h2>
+                <p>Ada Lovelace (1815-1852): İlk programcı olarak kabul edilen Ada Lovelace, Charles Babbage'ın analitik makinesi için ilk algoritmayı yazdı. Bu çalışma, modern bilgisayar biliminin temellerini oluşturdu.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>1900'ler</h2>
+                <p>Marie Curie (1867-1934): Radyoaktivite alanında öncü çalışmalar yapan Curie, iki Nobel Ödülü kazanarak bilim dünyasında çığır açtı. <br> Simone de Beauvoir (1908-1986): Fransız yazar ve felsefeci, "İkinci Cins" adlı eseriyle kadınların toplumdaki rolünü sorguladı ve feminist hareketin temel taşlarını attı.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>1970'ler</h2>
+                <p>Jane Goodall (1934- ): Doğa bilimci ve primatolog olarak, şempanzelerin davranışlarını inceleyerek insan-doğa ilişkisini yeniden tanımladı. Kadınların bilimdeki rolünü örnekleyerek güçlendirdi.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>1990'lar</h2>
+                <p>Sheryl Sandberg (1969- ): Facebook'un COO'su olarak, kadınların teknoloji sektöründe daha fazla yer alması için aktif olarak mücadele etti ve "Lean In" adlı kitabıyla kadınları güçlendirdi.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>2000'ler</h2>
+                <p>Reshma Saujani (1975- ): Girls Who Code adlı organizasyonu kurarak, kadınların teknoloji alanında eğitim almasını ve kariyer yapmasını teşvik etti.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+  
+
+    <div class="chart-container">
+        <div class="blog-post">
+            <h3>Teknolojide Kadınların Gücü: Geçmişten Günümüze</h3>
+            <p>Teknoloji, insanlık tarihinin en hızlı değişim geçiren alanlarından biri. Ancak bu değişim, sadece teknik yeniliklerle sınırlı değil; aynı zamanda kimlerin bu yeniliklere öncülük ettiğiyle de şekilleniyor. Kadınların, tarih boyunca teknoloji alanındaki katkıları, sıkça göz ardı edilen bir gerçek.
+            <hr>  Günümüzde kadın liderler 2024 yılı itibarıyla teknoloji dünyasında birçok kadın lider, yapay zeka, veri bilimi ve çevre teknolojileri gibi alanlarda çığır açmaya devam ediyor. Maya Ackerman, Sophia Johnson, Rachel Armstrong ve Lena Zhao gibi kadınlar, teknoloji dünyasında adil ve sürdürülebilir bir gelecek için önemli adımlar atıyorlar. Onların katkıları, yalnızca kendi alanlarında değil, aynı zamanda kadınların teknoloji sektöründeki varlığını güçlendirmek için de hayati önem taşıyor.
+            <hr>
+            <strong>Sonuç:</strong> Gelecek Kadınların Ellerinde. Kadınların teknoloji alanındaki başarıları, sadece geçmişte kalmadı; günümüzde de devam ediyor. Onların hikayeleri, genç kızların ve kadınların STEM alanlarında kariyer yapma hayallerini gerçeğe dönüştürmeleri için ilham kaynağı olmayı sürdürüyor. Teknoloji dünyasında cinsiyet eşitliği sağlandığında, inovasyonun da hız kazanacağına kuşku yok. Unutmayalım ki, kadınların gücü ve yaratıcılığı, teknolojinin geleceğini şekillendirecek en önemli etkenlerden biri.
+            </p>
+        </div>
+        <canvas id="myPieChart" width="300" height="300"></canvas>
+    </div>
+
+    <br>
+    <br>
+
+
+
+    <div class="flip-card-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/F-mDr2MWYAAHlCR.jpg" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Hedy Lamarr <br> (1914-2000)</h3> 
+                    <p><strong>Öykü:</strong> <br> Frekans atlamalı yayılım teknolojisi geliştirdi, modern Wi-Fi ve Bluetooth'un temelini attı. <br><strong>İlham Verici Nokta:</strong> <br> Bir aktris olmasına rağmen, teknolojiye yaptığı katkılar bilim dünyasında farklı yeteneklerin önemini vurguladı.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/Amazing Grace_ 1950s high-resolution photo.jpeg" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Grace Hopper <br> (1906-1992)</h3> 
+                    <p><strong>Öykü:</strong> <br> COBOL dilini geliştirdi ve bilgisayar programlamasında insan diline daha yakın kodlamalar yapılmasını sağladı.<br><strong>İlham Verici Nokta:</strong> <br> Yazılım mühendisliği ve programlama dünyasında öncü bir figür oldu, debugging kavramını yaygınlaştırdı.</p> 
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/zu82mgt4t95c1.jpg" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Radia Perlman <br> (1951- )</h3> 
+                    <p><strong>Öykü:</strong><br> Spanning Tree Protocol'ü (STP) geliştirerek internetin ağ altyapısını kurdu. <br><strong>İlham Verici Nokta:</strong> <br> "İnternetin annesi" olarak bilinen Perlman, internet teknolojilerinin temelini atan kadınlardan biridir.</p> 
+                    
+            
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/1200px-Katherine_Johnson_1983.jpg" alt="Avatar" >
+                </div>
+                <div class="flip-card-back">
+                    <h3>Katherine Johnson <br> (1918-2020)</h3> 
+                    <p><strong>Öykü:</strong> <br> NASA’da Apollo 11 görevinde yaptığı hesaplamalarla uzaya ve aya insan gönderilmesine katkıda bulundu. <br> <strong>İlham Verici Nokta:</strong> <br> Matematik dehası olarak, kadınların uzay bilimlerindeki önemini kanıtladı.</p> 
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/1_lvYXdTK3xbSRI9I3iQe1Dw.jpg" alt="Avatar" >
+                </div>
+                <div class="flip-card-back">
+                    <h3>Marissa Mayer <br> (1975- )</h3> 
+                    <p><strong>Öykü:</strong> <br> Google’ın ilk kadın mühendislerinden biri olarak kullanıcı arayüzü geliştirilmesine katkıda bulundu, Yahoo’nun CEO'su oldu. <br> <strong>İlham Verici Nokta:</strong> <br>Teknoloji devlerinin yönetiminde kadınların da önemli yer alabileceğini gösterdi.</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blog-container">
+        <div class="blog-post2">
+            <h3>Tarihsel Katkılar</h3>
+            <p>Kadınların teknoloji alanındaki katkıları, yüzyıllar boyunca belirleyici bir rol oynamıştır. Ada Lovelace, modern bilgisayar biliminin annesi olarak kabul edilmektedir. 19. yüzyılda, Charles Babbage'ın analitik makinesi için yazdığı algoritmalar, programlama dilinin ilk örnekleri arasında yer alır. Lovelace, makinenin yalnızca hesaplama değil, aynı zamanda sanat ve bilim gibi farklı alanlarda da kullanılabileceğini öngörmüştür.</p>
+        </div>
+    </div>
+
+
+
+    <div class="right-sidebar">
+        <div class="blog-post2">
+            <h3>Grace Hopper'ın Etkisi</h3>
+            <p>Grace Hopper, bilgisayar biliminin diğer bir devrimcisi olarak, programlamaya yeni bir soluk getirmiştir. İlk bilgisayar programcılarından biri olarak, COBOL adlı programlama dilinin geliştirilmesinde öncülük etmiş ve bilgisayarların daha erişilebilir hale gelmesine katkı sağlamıştır.</p>
+        </div>
+    
+        <div class="blog-post2">
+            <h3>Günümüzde Kadınların Rolü</h3>
+            <p>Günümüzde kadınlar, teknoloji sektöründe liderlik rollerini üstlenmekte ve birçok yenilikçi projeye imza atmaktadır. Fei-Fei Li, yapay zeka alanında önemli bir figür olarak, bilgisayarlara görsel algı yetenekleri kazandırmak için yaptığı çalışmalarla tanınmaktadır.</p>
+        </div>
+    
+        <div class="blog-post2">
+            <h3>Kadın Girişimcilerin Yükselişi</h3>
+            <p>Kadın girişimciler, teknolojik yeniliklerin yanı sıra iş dünyasında da önemli değişiklikler yaratmaktadır. Whitney Wolfe Herd, Bumble uygulamasını kurarak, kadınların dijital flört dünyasında söz sahibi olmalarını sağlamıştır.</p>
+        </div>
+    
+        <div class="blog-post2">
+            <h3>Gelecek Kadınların Ellerinde</h3>
+            <p>Kadınların teknoloji alanındaki rolünün ve katkılarının daha iyi anlaşılması, gelecekte daha fazla kadının bu sektörde yer almasına ve teknolojinin daha kapsayıcı bir şekilde şekillenmesine katkıda bulunacaktır. Teknoloji dünyasında cinsiyet eşitliği sağlandığında, inovasyonun da hız kazanacağına kuşku yok.</p>
+        </div>
+    </div>
+    
+
+
+
+        </div>  
+    </div>
+
+    
+        
+    
+
+
+
+    
+
+    <script>
+        const ctx = document.getElementById('myPieChart').getContext('2d');
+const myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Teknoloji Sektöründeki Kadın Oranı (%28)', 
+            'Üst Düzey Kadın Yöneticiler (%23)', 
+            'STEM Eğitiminde Kadın Oranı (%20)', 
+            'Kadın Girişimciler (%17)', 
+            'STEM Mesleklerinde Kadın Temsili (%28)'
+        ],
+        datasets: [{
+            label: 'Kadınların Teknoloji Alanındaki Temsili',
+            data: [28, 23, 20, 17, 28], // Oranlar
+            backgroundColor: [
+                
+                '#6b8aff',
+                '#af518c',
+                '#5ed0d8',
+                '#3e9192',
+                '#9b0fb2'
+            ],
+            borderColor: '#fff',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: {
+                        color: '#153c73', // Yazı rengi
+                        size: 14, // Yazı boyutu
+                        family: 'Poppins' // Yazı tipi
+                    }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Kadınların Teknoloji Alanındaki Temsili',
+                font: {
+                    color: '#153c73',  // Başlık yazı rengi
+                    size: 19, // Başlık yazı boyutu
+                    family: 'Raleway' // Başlık yazı tipi
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.label + ': ' + context.raw + '%'; // Yüzde bilgisi
+                    }
+                }
+            }
+            
+
+        }
+    }
+});
+
+
+
+
+
+    </script>
+
+<footer class="index-footer">
+    <p>© 2024 Büyük Başarıların Sessiz Mimarı: Kadınlar, Tüm Hakları Saklıdır.</p> 
+</footer>
+
+</body>
+</html>

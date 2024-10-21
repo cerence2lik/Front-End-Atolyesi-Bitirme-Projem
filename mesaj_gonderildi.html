@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesaj Gönderildi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!-- Bootstrap Icons Bağlantısı -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Raleway';
+            background-image: url(img/basic-rgb_53876-116485.avif);
+            color: #582287; /* Yazı rengi */
+            font-size: 17px;
+        }
+        .message {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc; /* Kenar rengi */
+            border-radius: 10px; /* Kenarların yuvarlanması */
+            background-color: #f2e0e0; /* İçerik arka plan rengi */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+            max-width: 400px; /* Maksimum genişlik */
+            width: 90%; /* Yüzde genişlik */
+        }
+        h2 {
+            color: #7d1087; /* Başlık rengi */
+            margin-bottom: 10px; /* Alt boşluk */
+        }
+        p {
+            margin: 10px 0; /* Üst ve alt boşluk */
+            font-size: 1.1em; /* Yazı boyutu */
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px; /* Üst boşluk */
+            padding: 10px 20px; /* İçerik kenar boşluğu */
+            background-color: #94299d; /* Bağlantı arka plan rengi */
+            color: white; /* Bağlantı yazı rengi */
+            text-decoration: none; /* Alt çizgi kaldır */
+            border-radius: 5px; /* Kenar yuvarlama */
+            transition: background-color 0.3s; /* Geçiş efekti */
+        }
+        a:hover {
+            background-color: #7d1087; /* Hover durumu */
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h2>Mesajınız Gönderildi!</h2>
+        <p>Bizimle özgürce iletişime geçtiğiniz için teşekkür ederiz <i class="bi bi-heart-fill"></i></p>
+        <a href="index.html">Ana Sayfaya Dön</a>
+    </div>
+</body>
+</html>

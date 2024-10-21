@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fbeef8; /* Arka plan rengi */
+            color: #0e3265;
+            right: 10px;
+        }
+
+        h1 {
+            font-family: 'Raleway';
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: center;
+        }
+    
+        h2, h3 {
+            font-family: 'Raleway';
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #0e3265;
+        }
+
+        .image-container {
+            background-image: url(img/international-women-s-day-celebration-equal-right-digital-art-style_23-2151368438.jpeg);
+            background-size: cover;
+            position: relative;
+            height: 300px;
+        }
+
+        .text {
+            background-color: rgba(35, 18, 107, 0.7);
+            color: white;
+            font-size: 10vw; 
+            font-weight: bold;
+            margin: 0 auto;
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: multiply;
+        }
+
+        .img-fluid {
+            width: 330px;
+            margin-left: 65px;
+            height: 330px;
+            margin-bottom: 30px;
+            align-items: baseline;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-top {
+            top: 20px;
+            right: 10px; 
+        }
+
+        .blog-post {
+            margin-bottom: 2rem;
+            top: 50px;
+            padding: 1.5rem;
+            background-color: #ffffff; /* Beyaz arka plan */
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h2 {
+            font-weight: bold;
+            color: #343a40; /* Başlık rengi */
+        }
+
+        .blog-post p {
+            margin-bottom: 1rem; /* Paragraflar arası boşluk */
+        }
+
+        .blog-post img {
+            max-width: 100%; /* Resim boyutunu otomatik ayarlayın */
+            height: auto; /* Yüksekliği otomatik ayarlayın */
+        }
+
+        #pie_chart_div {
+            margin-top: 2px; 
+            margin-bottom: 50px;
+            margin-left: 0px; 
+            width: 546px;
+            height: 300px; 
+            background-color: #9d5c5c; 
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #bar_chart_div {
+            width: 450px;
+            height: 300px;
+            margin: auto;
+            margin-top: 1px;
+            margin-left: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .p-4 {
+            padding: 1.5rem; 
+            margin-left: auto; 
+            margin-right: -60px; 
+            max-width: 400px; 
+        }
+
+        .fst-italic {
+            font-style: italic; 
+            color: #0e3265; 
+            margin-bottom: 1rem; 
+        }
+
+        .list-unstyled {
+            padding-left: 0; 
+        }
+
+        .list-unstyled li {
+            margin-bottom: 0.5rem; 
+        }
+
+        .list-unstyled a {
+            text-decoration: none; 
+            color: #0e3265; 
+            transition: color 0.3s; 
+        }
+
+        .list-unstyled a:hover {
+            color: #007bff; 
+            text-decoration: underline; 
+        }  
+
+        .blockquote {
+            background-color: #fff; /* Açık gri arka plan */
+            border-left: 5px solid #0e3265; /* Sol kenar için mavi çerçeve */
+            padding: 0.5rem 1rem; /* İç boşluk */
+            margin: 1rem 0; /* Dış boşluk */
+            border-radius: 0.5rem; /* Köşe yuvarlama */
+            font-family: 'Poppins';
+            font-style: italic; /* İtalik yazı stili */
+            color: #0e3265; /* Yazı rengi */
+            max-width: 300px; /* Maksimum genişliği belirle */
+            width: 500px;
+            height: 150px;
+            max-width: 500px; /* Maksimum genişliği belirle */
+            margin-left: auto; /* Ortalamak için otomatik sol boşluk */
+            margin-right: auto; /* Ortalamak için otomatik sağ boşluk */
+        }
+
+        .blockquote-footer {
+            font-size: 18px; /* Yazı boyutu */
+            font-weight: bold;
+            text-align: right; /* Sağdan hizalama */
+            color: #0e3265; /* Renk */
+            margin-top: 0.5rem; /* Üstte boşluk */
+            font-style: normal; /* Normal yazı stili */
+        }
+        .custom-image {
+            width: 100%; /* Genişliği tam kapsaması için */
+            height: 200px; /* Yüksekliği otomatik ayarla */
+            opacity: 0.4; /* Şeffaflık */
+            display: block; /* Yatayda hizalama için */
+            position: relative; /* Üstteki overlay'in konumlandırılması için */
+            margin: 0; /* Tüm kenarlarda boşluk yok */
+            padding: 0; /* Tüm kenarlarda iç boşluk yok */
+            margin-top: 50px;
+        }
+
+        .text-overlay-left {
+            font-family: 'Poppins';
+            color: #153c73;
+            font-weight: 550;
+            font-size: 16px; /* Font boyutu */
+            top: 50%; /* Dikeyde konum */
+            left: 7%; /* Sol tarafta konum */
+            transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+            z-index: 3; /* Resmin üstünde görünmesi için */
+            padding: 10px; /* İç boşluk ayarı */
+            margin: 0; /* Varsayılan dış boşluğu kaldır */
+            max-width: 60%; /* Genişliği sınırlamak için */
+        }
+
+        .text-overlay-right {
+            font-family: 'Poppins';
+            color: #153c73;
+            font-weight: 550;
+            font-size: 16px; /* Font boyutu */
+            top: 55%; /* Dikeyde konum */
+            right: 13%; /* Sağ tarafta konum */
+            transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+            z-index: 3; /* Resmin üstünde görünmesi için */
+            padding: 10px; /* İç boşluk ayarı */
+            margin: 0; /* Varsayılan dış boşluğu kaldır */
+            text-align: center; /* Metni sağdan hizala */
+        }
+
+
+         .index-footer {
+           color: #153c73;
+           text-align: center;
+           position: absolute;
+           padding: 10px;
+           width: 100%; /* Tüm genişliği kapla */
+        }
+
+        /* index.html footer stili */
+.index-footer {
+    color: #153c73;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 100%; /* Tüm genişliği kapla */
+}
+
+
+    </style>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+</head>
+<body>
+
+    <div class="image-container">
+        <div class="text">KADIN</div>
+    </div>
+
+    <div class="container mt-4"> <!-- Düzeltilmiş div başlangıcı -->
+        <div class="row">
+            <div class="col-md-6"> <!-- Blog postları için sol sütun -->
+                <h1>Kadınların Yaşadığı Güncel Sıkıntılar</h1>
+
+                <div class="blog-post">
+                    <h3>Eğitim Eşitsizliği</h3>
+                    <img src="img/61d48f1f4e3fe11cf4054c80.webp" alt="Eğitim Eşitsizliği" class="img-fluid">
+                    <ul>
+                        <li>Kadınların eğitimdeki eşitsizliği, toplumsal bir sorun.</li>
+                        <li>Eğitim fırsatlarının artırılması gereklidir.</li>
+                        <li>Cinsiyet eşitliği sağlanmalıdır.</li>
+                    </ul>
+                </div>
+
+                <div class="blog-post">
+                    <h3>Çalışma Hayatında Eşitsizlik</h3>
+                    <img src="img/gender-inequality-unfair-promotion-job-opportunities-isometric-concept-with-man-going-up-escalator-high-salary-while-woman-climbing-stairs-vector-illustration_1284-78903.jpg" alt="Çalışma Hayatında Eşitsizlik" class="img-fluid">
+                    <p>Kadınların çalışma hayatındaki eşitsizlikleri, geçmişten günümüze önemli bir sosyal sorun olmaya devam etmektedir.</p>
+                </div>
+
+                <div class="blog-post">
+                    <h3>Kadına Yönelik Şiddet</h3>
+                    <p>Kadına yönelik şiddet, hem geçmişte hem de günümüzde yaygın bir sorun olmaya devam etmektedir.</p>
+                </div>
+
+                <div class="blog-post">
+                    <h3>Toplumsal Cinsiyet Rolleri</h3>
+                    <ul>
+                        <li>Toplumsal cinsiyet rolleri, kadınların bağımsızlıklarını ve kimliklerini bulmalarını engelleyerek eğitim, kariyer, aile ve toplumsal ilişkilerde eşitsizlikleri derinleştirir.</li>
+                        <li>Kadınların potansiyellerini gerçekleştirebilmeleri için kapsamlı değişimlere ihtiyaç vardır.</li>
+                        <li>Eğitim, politika ve sosyal hizmetler alanında yapılacak reformlar, toplumsal cinsiyet eşitliğini sağlamak için kritik öneme sahiptir.</li>
+                    </ul>
+                </div>
+
+                <div class="blog-post">
+                    <h3>Siyasi Temsilde Eşitsizlik</h3>
+                    <ul>
+                        <li>Kadınların siyaset sahnesinde yeterince temsil edilmemesi, karar alma süreçlerinde cinsiyet eşitsizliğinin devam ettiğini göstermektedir.</li>
+                        <li>Kadınların potansiyellerini gerçekleştirebilmeleri için kapsamlı değişimlere ihtiyaç vardır.</li>
+                        <li>Kadınların siyasi alanda güç kazanması için mücadele devam etmekte, cinsiyet kotası gibi uygulamalarla kadın temsilinin artırılmasına yönelik çalışmalar yapılmaktadır.</li>
+                        <li>2023 itibarıyla TBMM’deki kadın milletvekili oranı %17,4’tür. Yerel yönetimlerde ise kadın temsil oranı %11,7’dir.</li>
+                    </ul>
+                </div>
+
+                <h2>Türkiye'de Kadın Temsili Oranları (2020-2023)</h2>
+                <div id="bar_chart_div"></div>
+
+                <div class="blog-post">
+                    <h3>Kadın Sağlığı</h3>
+                    <ul>
+                        <li>Kadın sağlığı, bireylerin ve toplumların gelişiminde önemli bir yer tutmaktadır.</li>
+                        <li>Geçmişten günümüze kadın sağlığı konusundaki ihmal ve kısıtlamalar, kadınların sağlığını olumsuz yönde etkilemektedir.</li>
+                        <li>Kadınların sağlık hizmetlerine erişiminin artırılması, toplumsal cinsiyet eşitliğinin sağlanması açısından kritik öneme sahiptir.</li>
+                        <li>Sağlık haklarının korunması, kadınların güçlenmesi için gereklidir.</li>
+                    </ul>
+                </div>
+
+                <div class="blog-post">
+                    <h3>Ekonomik Eşitsizlik</h3>
+                    <ul>
+                        <li>Kadınların ekonomik eşitsizlikle mücadelesi, toplumsal cinsiyet eşitliği için büyük bir önem taşımaktadır.</li>
+                        <li>Kadınların erkeklerle eşit ekonomik fırsatlara erişimi, sadece kadınların bireysel refahı için değil, aynı zamanda toplumsal kalkınma ve ekonomik büyüme için de kritik bir unsurdur.</li>
+                        <li>Kadınların ekonomik alanda güçlenmesi, hem iş hayatında hem de toplumsal hayatta daha adil ve eşit bir dünya inşa edilmesine katkı sağlayacaktır.</li>
+                    </ul>
+                </div>
+            </div>
+                    
+            <div class="col-md-6"> 
+                <div class="sticky-top"> 
+                    <div class="blog-post">
+                        <h3>Kadınların Ülkemizdeki Eğitim ve İstihdamı ile İlgili Yeri</h3>
+                        <p>Türkiye İstatistik Kurumu 2023 Raporu'na Göre:</p>
+                        <ul>
+                            <li>Kadın istihdam oranı: %34,5</li>
+                            <li>Kadınların yükseköğrenim mezuniyet oranı: %55</li>
+                            <li>Kadına yönelik şiddet oranı: %38</li>
+                            <li>TBMM'deki kadın milletvekili oranı: %17,4</li>
+                        </ul>
+                    </div>
+
+                    <div id="pie_chart_div"></div> 
+
+                    <div class="blockquote-section">
+                        <blockquote class="blockquote">
+                            <p>"Gelecek nesiller, dünyayı değiştirecek olan kadınların gücünü asla küçümsememelidir."</p>
+                            <footer class="blockquote-footer">Ada Lovelace</footer>
+                        </blockquote>
+            
+                        <blockquote class="blockquote">
+                            <p>"Bir çocuğun, bir öğretmenin, bir kalemin ve bir kitabın dünyayı değiştirme gücü vardır. Eğitim, cinsiyet eşitliği için en güçlü silahımızdır."</p>
+                            <footer class="blockquote-footer">Malala Yousafzai</footer>
+                        </blockquote>
+            
+                        <blockquote class="blockquote">
+                            <p>"Cinsiyet eşitliğinin sağlanması, sadece kadınların değil, tüm insanlığın yararınadır. Bu değişimi gerçekleştirmek için mücadele etmeliyiz."</p>
+                            <footer class="blockquote-footer">Ruth Bader Ginsburg</footer>
+                        </blockquote>
+            
+                        <blockquote class="blockquote">
+                            <p>"Kadınlar, teknoloji dünyasında kendilerini ifade etme fırsatını bulduklarında, muazzam katkılar sağlayabiliyor."</p>
+                            <footer class="blockquote-footer">Diane Greene (VMware Kurucu Ortağı)</footer>
+                        </blockquote>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <div class="position-relative">
+        <img src="img/gender-6188940_1280.webp" alt="Gender" class="img-fluid custom-image">
+        
+        <div class="position-absolute text-overlay-left">
+            Kadınlarla ilgili o kadar çok şey var ki, bu konuların karmaşıklığı ve çeşitliliği, yazılı kelimelerin ötesine geçiyor. Kadınların hayatlarındaki başarılar, mücadeleler ve engeller, yalnızca bireylerin değil, tüm toplumların kaderini şekillendiriyor. Eğitim, sağlık, iş hayatı ve toplumsal cinsiyet eşitliği gibi alanlarda yaşanan sorunlar ve kazanımlar, kadınların güçlü varoluşlarının ve hak mücadelelerinin görkemli bir yansıması olarak karşımıza çıkıyor. Bu nedenle, kadınların hikayeleri, sayfalara sığmayacak kadar kıymetli ve önemlidir.
+        </div>
+        
+        
+    
+        <div class="position-absolute text-overlay-right">
+            ÖRNEK KAYNAK 
+            <ol class="list-unstyled overlay-list">
+                <li><a href="https://data.tuik.gov.tr/Bulten/Index?p=Istatistiklerle-Kadin-2023-53675">TÜİK</a></li>
+                <li><a href="https://www.weforum.org/">WEF</a></li>
+                <li><a href="https://www.who.int/health-topics/gender#tab=tab_1">WHO</a></li>
+            </ol>
+        </div>
+    </div>
+    
+    
+    
+    
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawPieChart);
+
+        function drawPieChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Gösterge', 'Değer'],
+                ['Yükseköğretim mezunu', 21.6],
+                ['Lise altı eğitimli', 27.1],
+                ['Okuryazar olmayan', 13.9]
+            ]);
+
+            var options = {
+                title: 'Türkiye’de Kadınların Eğitim Düzeyleri',
+                pieSliceText: 'percentage',
+                titleTextStyle: {
+                    color: '#0e3265', 
+                    fontSize: 18, 
+                    bold: true, 
+                    fontName: 'Raleway', 
+                },
+                slices: {
+                    0: { color: '#8FD8D8' },
+                    1: { color: '#6959CD' },
+                    2: { color: '#F08080' }
+                },
+                legend: {
+                    position: 'right', 
+                    alignment: 'center', 
+                    textStyle: {
+                        fontName: 'Raleway', 
+                        fontSize: 14, 
+                        color: '#0e3265' 
+                    } 
+                },
+                chartArea: {
+                    left: 85,
+                    top: 40, 
+                    width: '130%', 
+                    height: '80%' 
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Yıl', 'TBMM Kadın Milletvekili Oranı (%)', 'Yerel Yönetim Kadın Temsil Oranı (%)'],
+                ['2020', 15, 10],
+                ['2021', 16, 10.5],
+                ['2022', 16.5, 11],
+                ['2023', 17.4, 11.7]
+            ]);
+
+            var options = {
+                title: 'Kadın Temsili Oranları',
+                isStacked: true,
+                colors: ['#FF80AB', '#9C27B0'],
+                hAxis: {
+                    title: 'Yıl',
+                    format: '0'
+                },
+                vAxis: {
+                    title: 'Oran (%)'
+                },
+                chartArea: { width: '80%', height: '70%' }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div'));
+            chart.draw(data, options);
+        }
+
+        google.charts.setOnLoadCallback(drawBarChart);
+    </script>
+
+<footer class="index-footer">
+    <p>© 2024 Büyük Başarıların Sessiz Mimarı: Kadınlar, Tüm Hakları Saklıdır.</p> 
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

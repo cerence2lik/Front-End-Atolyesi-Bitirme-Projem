@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;  
+  color: #153c73;
+  background-color: rgb(244, 230, 255);
+  font-size: 18px;
+}
+
+/* Header/logo Title */
+.header {
+  text-align: left;
+  font-style: italic;
+  font-size: 15px;
+  margin-left: 36px;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftcolumn {
+  flex: 30%;
+  background-color: rgb(244, 230, 255);
+  padding: 20px;
+}
+
+/* Main column */
+.rightcolumn {
+  flex: 70%;
+  background-color: rgb(244, 230, 255);
+  padding: 20px;
+}
+
+/* Real image */
+.realimg {
+  width: 100%;
+  height: auto;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: rgb(224, 205, 239);
+   padding: 20px;
+   margin-top: 20px;
+   border-radius: 10px; /* Kenar köşelerini yumuşat */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+  
+}
+
+.post-image {
+  width: 150%; /* %100 genişlik, konteynerin genişliğine göre ayarlanır */
+  max-width: 150px; /* Maksimum genişlik 400px */
+  height: auto; /* Yüksekliği otomatik olarak ayarlar, orantılı kalır */
+  margin-left: 65px;
+}
+
+.post-image1{
+    width: 160%; /* %100 genişlik, konteynerin genişliğine göre ayarlanır */
+    max-width: 200px; /* Maksimum genişlik 400px */
+    height: auto; /* Yüksekliği otomatik olarak ayarlar, orantılı kalır */
+    margin-left: 30px;
+}
+
+.content-wrapper {
+    display: flex; /* Flexbox kullanarak içerikleri yan yana hizalar */
+    align-items: stretch; /* İçeriklerin yüksekliğini eşitler */
+    
+}
+
+.title-image {
+    margin: auto;   
+    margin-left: 20px; /* Görsel ile metin arasında boşluk bırak */
+    width: 300px; /* Genişliği otomatik ayarla */
+    height: 300px; /* Yüksekliği otomatik ayarla */
+}
+
+.content-wrapper p {
+    flex: 1; /* Metin alanının genişlemesini sağlar */
+    margin: 0; /* Varsayılan p etiketinin marjını sıfırlar */
+    margin-left: 20px; /* Paragraf ile görsel arasında boşluk bırak */
+
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+.index-footer {
+    color: #153c73;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* absolute yerine relative kullanalım */
+    bottom: 0;
+    margin-top: 50px; /* Yukarıda biraz boşluk bırakalım */
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Cam Tavan Sendromu: <br> Görünmez Engel Kadınların Önünde</h1>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <img src="img/gender-identity-concept_23-2148539311.avif" class="realimg" alt="About Me">
+      <p>Modern dünyada iş gücüne katılım oranları ve eğitim seviyeleri artmasına rağmen, kadınların kariyerlerinde yükselirken karşılaştığı engeller hala büyük bir sorun olarak karşımıza çıkıyor. Bu engellerden en dikkat çekeni <strong>"cam tavan"</strong> kavramıdır. Görünmeyen bu bariyer, özellikle kadınların ve azınlık gruplarının kariyer basamaklarında yükselmelerini kısıtlayan, fark edilmeyen ama hissedilen bir engeldir.</p>
+    </div>
+    
+    <div class="card">
+        <img src="img/glass_ceiling.jpg" class="post-image1" alt="Popular Post 1">
+        <h3>Cam Tavanı Nasıl Kırarız?</h3>
+        <div>
+            <strong>Şeffaf Kariyer Politikaları: <br> </strong> Şirketlerin kariyer basamaklarını şeffaf hale getirmesi ve her çalışanın yeteneklerine dayalı olarak eşit fırsatlar yaratması önemlidir. <br> <br>
+            <strong>Mentorluk Programları: </strong>
+            Kadın liderlerin daha genç kadınlara mentorluk yapması, onların karşılaştığı engelleri aşmalarında yardımcı olabilir. <br> <br>
+            <strong>Ebeveyn İzinleri ve Esnek Çalışma:</strong>
+             Kadınların kariyerlerinde kesintiye neden olabilecek faktörlerden biri de aile sorumluluklarıdır. Esnek çalışma saatleri ve ebeveyn izni politikalarının iyileştirilmesi, bu konuda önemli bir adımdır. <br><br>
+             <strong> Toplumsal Farkındalık:</strong>
+            Toplumda kadınların güçlü liderler olabileceği, kariyerlerinde ilerleyebileceği yönünde farkındalığı artırmak, cam tavanı yıkmada kilit bir rol oynar.
+            </div>
+      </div>
+      
+    <div class="card">
+      <h3>Sonuç:</h3>
+      <p> Cam tavan, sadece kadınların değil, iş dünyasının tüm paydaşlarının çözmesi gereken bir sorundur. Eşitlikçi ve kapsayıcı bir iş ortamı oluşturulması, yalnızca kadınların kariyerlerinde daha fazla yükselmesine değil, aynı zamanda iş yerlerinin de daha verimli ve yaratıcı hale gelmesine katkıda bulunacaktır. Kadınların cam tavanı kırması, geleceğin daha adil ve eşitlikçi bir dünya yaratmak adına atılacak önemli bir adımdır.</p>
+    </div>
+  </div>
+  
+  <div class="rightcolumn">
+    <div class="card">
+        <h2>Cam Tavan Nedir?</h2>
+        <div class="content-wrapper">
+            <p>Cam tavan, örgütsel hiyerarşi içinde üst düzey yönetim pozisyonlarına erişimi engelleyen, resmiyette olmayan ancak fiilen var olan bir bariyeri ifade eder. Kadınlar ve azınlıklar, genellikle bu engel nedeniyle potansiyellerini tam olarak gerçekleştiremezler. Bu durum, iş hayatında cinsiyet eşitsizliğinin en somut göstergelerinden biridir. <br><br>
+            <strong>Kadınların Cam Tavana Çarpması:</strong>
+            Kadınlar, özellikle iş dünyasında daha üst düzey yönetim kademelerine çıkarken, bu görünmeyen engelle karşılaşırlar. Şirketlerde orta düzey yöneticilik pozisyonlarında birçok kadın yer alırken, CEO, CFO veya yönetim kurulu gibi pozisyonlarda oranlar büyük bir düşüş gösterir. Bunun sebepleri arasında toplumsal cinsiyet rolleri, çalışma hayatındaki ön yargılar ve çocuk bakımına dair yükümlülükler sayılabilir. </p>
+            <img src="img/755329e7427aa65959b4be5fcd8917e8.webp" class="title-image" alt="Title Heading Image">
+        </div>
+    </div>
+
+    
+
+    <div class="card">
+        <h2>Kadınların Cam Tavana Çarpması</h2>
+        <p>Kadınlar, özellikle iş dünyasında daha üst düzey yönetim kademelerine çıkarken, bu görünmeyen engelle karşılaşırlar. Şirketlerde orta düzey yöneticilik pozisyonlarında birçok kadın yer alırken, CEO, CFO veya yönetim kurulu gibi pozisyonlarda oranlar büyük bir düşüş gösterir. Bunun sebepleri arasında toplumsal cinsiyet rolleri, çalışma hayatındaki ön yargılar ve çocuk bakımına dair yükümlülükler sayılabilir. <br><br>
+            <h3>Cam Tavanın Belirtileri: <br></h3> 
+            <strong>Liderlik Rollerinde Az Temsil Edilme:</strong>
+            <br> Kadınlar, yönetim kademelerinde orantısız bir şekilde az temsil edilmektedir. 2023 yılında Fortune 500 şirketlerinin yalnızca %8'inde kadın CEO'lar bulunmaktadır. 
+            <br>
+            <br>
+           <strong> Eşit Olmayan Ücretler:</strong> Kadınlar, aynı işi yapan erkek meslektaşlarına kıyasla daha az maaş almaktadır. Cinsiyetler arası maaş farkı hala birçok sektörde çözülmemiş bir sorun.
+            <br><br>
+            <strong>Önyargı ve Stereotipler:</strong> Kadınların liderlik yetenekleriyle ilgili kalıp yargılar, onların kariyerlerinde ilerlemelerini zorlaştıran unsurlardandır. "Kadınlar duygusaldır, güçlü lider olamazlar" gibi stereotipler, cam tavanı güçlendiren unsurlar arasındadır. </p>
+      </div>
+
+      <div class="card">
+        <h2>Cam Tavan ve UN Women ile Women in Tech Global Kampanyası: <br> "Beyond Ceilings"</h2>
+        <div class="content-wrapper">
+            <img src="img/what-is-glass-ceiling.webp" class="title-image" alt="Title Heading Image">
+            
+            <p>Dünya genelinde teknoloji sektöründe kadınların karşılaştığı "cam tavan" sorununa yönelik farkındalık yaratmak için, <a href="https://women-in-tech.org/" target="_blank">Women in Tech Global</a> ve <a href="https://www.unwomen.org/" target="_blank">UN Women</a> ortak bir kampanya başlattı. 
+            <br> 
+            <br> "Beyond Ceilings" adlı bu küresel kampanya, kadınların kariyerlerinde karşılaştıkları görünmez engelleri ortadan kaldırmayı amaçlıyor. Mayıs 2024'te Paris'te başlatılan bu kampanya, toplumsal cinsiyet eşitsizliğini vurgulayan yaratıcı bir kısa filmle dikkat çekti. 
+             <br>
+             <br>
+             Filmde, küçük bir kız çocuğu olan Lily'nin her alanda karşılaştığı düşük tavanlar sembolik olarak cam tavanı temsil ediyor. Kızların ve kadınların toplum tarafından biçilen sınırları aşmalarının ne kadar zor olduğu çarpıcı bir şekilde gözler önüne seriliyor.
+             <br>
+             <br>
+             Detaylar için <a href="pdf/Women-in-Tech-Global-and-UN-Women-Call-to-Shatter-the-Glass-Ceiling-in-Beyond-Ceilings-Campaign.pdf" target="_blank">Women In Tech dosyasını buradan indirebilirsiniz.</a>
+            
+            </p>
+
+            
+            
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content-wrapper">
+            <p> <br> <br> <br>
+                <strong>Cam Tavan ve UN Women ile Women in Tech Global Kampanyası</strong><br><br>
+                Bu videoda, kadınların kariyerlerinde karşılaştıkları cam <br> tavan sorununa dair farkındalık yaratmak için başlatılan kampanyayı izleyebilirsiniz.
+            </p>
+            <iframe width="350" height="240" src="https://www.youtube.com/embed/doywsK5F1gI" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    
+
+    
+    
+
+    
+
+
+</div>
+
+<footer class="index-footer">
+    <p>© 2024 Büyük Başarıların Sessiz Mimarı: Kadınlar, Tüm Hakları Saklıdır.</p> 
+</footer>
+
+
+</body>
+</html>
