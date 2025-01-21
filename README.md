@@ -1,16 +1,17 @@
-# Front-End Atölyesi Bitirme Projem
+#  Front-End Atölyesi Bitirme Projem 🌸
+Merhaba! 👋 Bu proje, toplumda ve teknolojide cinsiyet eşitliği konusuna dikkat çekmek amacıyla geliştirilmiştir. Kadınların başarılarını görünür kılmak ve toplumda farkındalık oluşturmak için tasarlanan bu web projesi, HTML, CSS ve JavaScript kullanılarak oluşturulmuştur.
 
-Bu proje, Front-End Atölyesi kapsamında geliştirilmiş olup, **HTML, CSS ve JavaScript** kullanılarak kullanıcı dostu ve interaktif bir web arayüzü oluşturulmuştur.
+## Proje Hakkında 🌍 
+Kadınların iş hayatındaki ve teknoloji dünyasındaki yerinin güçlendirilmesi, görünmez emeğin fark edilmesi ve cam tavan gibi kavramlara vurgu yapmak bu projenin temel amaçlarından biridir.
 
-## 🚀 Proje Hakkında
+Bu projede, kadınların başarı hikayeleri, toplumsal cinsiyet eşitliği ve bilinçlendirme odaklı içerikler sunulmaktadır. Sayfa yapısı; blog yazıları, güncel bilgiler ve etkileşimli içeriklerle zenginleştirilmiştir.
 
-Bu proje, kullanıcıların kolayca bilgiye erişmesini sağlamak için tasarlanmıştır. Ana sayfa, form sayfası ve bilgi ekranları gibi bölümler içermektedir.
+### Kullanılan Teknolojiler 🛠️ 
+Bu proje aşağıdaki teknolojiler kullanılarak geliştirildi:
 
-### Kullanılan Teknolojiler
-
-- **HTML** – Sayfa yapısı ve içerik düzeni
-- **CSS** – Stil ve tasarım düzenlemeleri
-- **JavaScript** – Dinamik etkileşimler ve form doğrulamaları
+- **HTML** – Sayfanın temel yapısını oluşturdum.
+- **CSS** – Görsel düzenlemeler ile sayfanın kullanıcı dostu hale gelmesini sağladım.
+- **JavaScript** – Sayfanın etkileşimli hale gelmesini sağlayarak dinamik özellikler ekledim.
 
 ## 📂 Proje Yapısı
 
@@ -28,7 +29,7 @@ Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 📜 öne-cikan-kadinlar.html  → Öne çıkan kadınlar sayfası  
 
 
-## 🛠 Kurulum
+## 🚀 Projeyi Nasıl Çalıştırabilirsiniz?
 
 Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
