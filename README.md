@@ -38,7 +38,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
    git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
 2. **Proje dizinine gidin ve açın:**
-  ```bash
 cd Front-End-Atolyesi-Bitirme-Projem
 
 3. **Projeyi tarayıcıda açın:**
