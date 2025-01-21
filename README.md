@@ -32,16 +32,16 @@ Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 
 Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-1. **Depoyu klonlayın:
-Terminali açın ve aşağıdaki komutu çalıştırarak projeyi bilgisayarınıza indirin::**  
+1. **Depoyu klonlayın:**  
+Terminali açın ve aşağıdaki komutu çalıştırarak projeyi bilgisayarınıza indirin:
 git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
-2. **Proje dizinine gidin:
-Aşağıdaki komutu kullanarak proje dizinine geçin::**
+2. **Proje dizinine gidin:**
+Aşağıdaki komutu kullanarak proje dizinine geçin:
 cd Front-End-Atolyesi-Bitirme-Projem
 
-3. **Projeyi tarayıcıda açın:
-Projenin ana sayfasını görmek için index.html dosyasına çift tıklayın.🎉**
+3. **Projeyi tarayıcıda açın:**
+Projenin ana sayfasını görmek için index.html dosyasına çift tıklayın.🎉
 
 ## 📸 Ekran Görüntüleri
 
