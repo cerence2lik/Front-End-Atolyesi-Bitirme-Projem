@@ -48,7 +48,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
   <img src="https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png" alt="Ana Sayfa" width="80%">
 </p>
 
-
 ## 📞 İletişim
 Bu proje hakkında daha fazla bilgi almak için [LinkedIn Profilim](https://www.linkedin.com/in/cerencelik2) adresinden bana ulaşabilirsiniz.
 
