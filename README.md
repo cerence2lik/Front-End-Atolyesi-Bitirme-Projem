@@ -40,7 +40,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
 2. **Proje dizinine gidin:**
 Aşağıdaki komutu kullanarak proje dizinine geçin:,
-
 cd Front-End-Atolyesi-Bitirme-Projem
 
 4. **Projeyi tarayıcıda açın:**
