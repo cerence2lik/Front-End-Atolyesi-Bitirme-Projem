@@ -32,15 +32,22 @@ Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 
 Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-1. Depoyu klonlayın:
-git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
+1. **Depoyu klonlayın:**  
+   Terminale aşağıdaki komutu yazın ve projeyi bilgisayarınıza indirin:
+
+   ```bash
+   git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
 2. Proje dizinine gidin ve `index.html` dosyasını bir tarayıcıda açın.
+ cd Front-End-Atolyesi-Bitirme-Projem
 
 ## 📸 Ekran Görüntüleri
 
-**Ana Sayfa Görünümü:**
-![Ana Sayfa](https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png)
+### Ana Sayfa Görünümü:
+<p align="center">
+  <img src="https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png" alt="Ana Sayfa" width="80%">
+</p>
+
 
 ## 📞 İletişim
 Bu proje hakkında daha fazla bilgi almak için [LinkedIn Profilim](https://www.linkedin.com/in/cerencelik2) adresinden bana ulaşabilirsiniz.
