@@ -39,7 +39,7 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
    ```bash
    git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
-2. Proje dizinine gidin ve `index.html` dosyasını bir tarayıcıda açın.
+2. Proje dizinine gidin ve `index.html` dosyasına çift tıklayarak projenin ana sayfasını görüntüleyebilirsiniz. 🎉
  cd Front-End-Atolyesi-Bitirme-Projem
 
 ## 📸 Ekran Görüntüleri
