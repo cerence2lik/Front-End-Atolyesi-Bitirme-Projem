@@ -35,13 +35,14 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 1. **Depoyu klonlayın:**  
 Terminali açın ve aşağıdaki komutu çalıştırarak projeyi bilgisayarınıza indirin:
 
-git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
+  git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
 3. **Proje dizinine gidin:**
-Aşağıdaki komutu kullanarak proje dizinine geçin:
-cd Front-End-Atolyesi-Bitirme-Projem
+Aşağıdaki komutu kullanarak proje dizinine geçin:,
 
-4. **Projeyi tarayıcıda açın:**
+  cd Front-End-Atolyesi-Bitirme-Projem
+
+5. **Projeyi tarayıcıda açın:**
 Projenin ana sayfasını görmek için index.html dosyasına çift tıklayın.🎉
 
 ## 📸 Ekran Görüntüleri
