@@ -28,19 +28,21 @@ Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 📜 script.js                → JavaScript fonksiyonları  
 📜 öne-cikan-kadinlar.html  → Öne çıkan kadınlar sayfası  
 
-
 ## 🚀 Projeyi Nasıl Çalıştırabilirsiniz?
 
 Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
 1. **Depoyu klonlayın:**  
    Terminale aşağıdaki komutu yazın ve projeyi bilgisayarınıza indirin:
-
    ```bash
    git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
-2. Proje dizinine gidin ve `index.html` dosyasına çift tıklayarak projenin ana sayfasını görüntüleyebilirsiniz. 🎉
- cd Front-End-Atolyesi-Bitirme-Projem
+2. **Proje dizinine gidin ve açın:**
+  ```bash
+cd Front-End-Atolyesi-Bitirme-Projem
+
+3. **Projeyi tarayıcıda açın:**
+index.html dosyasına çift tıklayarak projenin ana sayfasını görüntüleyebilirsiniz. 🎉
 
 ## 📸 Ekran Görüntüleri
 
