@@ -16,25 +16,17 @@ Bu proje, kullanıcıların kolayca bilgiye erişmesini sağlamak için tasarlan
 
 Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 
-📁 img/ → Görsellerin bulunduğu klasör
+📂 img/                     → Görsellerin bulunduğu klasör  
+📂 pdf/                     → PDF dosyalarının yer aldığı klasör  
+📜 blog-cam-tavan.html      → Blog sayfası içeriği  
+📜 güncel-durumlar.html     → Güncel bilgiler içeren sayfa  
+📜 iletisim.html            → İletişim sayfası  
+📜 index.html               → Ana sayfa  
+📜 indexstyle.css           → CSS stil dosyası  
+📜 mesaj_gonderildi.html    → Form gönderim sonrası sayfa  
+📜 script.js                → JavaScript fonksiyonları  
+📜 öne-cikan-kadinlar.html  → Öne çıkan kadınlar sayfası  
 
-📁 pdf/ → PDF dosyalarının yer aldığı klasör
-
-📜 blog-cam-tavan.html → Blog sayfası içeriği
-
-📜 güncel-durumlar.html → Güncel bilgiler içeren sayfa
-
-📜 iletisim.html → İletişim sayfası
-
-📜 index.html → Ana sayfa
-
-📜 indexstyle.css → CSS stil dosyası
-
-📜 mesaj_gonderildi.html → Form gönderim sonrası sayfa
-
-📜 script.js → JavaScript fonksiyonları
-
-📜 öne-cikan-kadinlar.html → Öne çıkan kadınlar sayfası
 
 ## 🛠 Kurulum
 
