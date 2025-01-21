@@ -50,7 +50,6 @@ git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
 Proje arayüzü:
 
-Ana sayfa görünümü:
 ![Ana Sayfa][(https://github.com/kullaniciadi/projeadi/blob/main/img/anasayfa.png)](https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png)
 
 
