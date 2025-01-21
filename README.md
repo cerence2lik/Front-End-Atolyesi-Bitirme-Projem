@@ -53,7 +53,6 @@ Proje arayüzü:
 Ana sayfa görünümü:
 ![Ana Sayfa](https://github.com/kullaniciadi/projeadi/blob/main/img/anasayfa.png)
 
-![Ekran Görüntüsü](link-to-image)
 
 ## 📞 İletişim
 Bu proje hakkında daha fazla bilgi almak için [LinkedIn Profilim](https://www.linkedin.com/in/cerencelik2) adresinden bana ulaşabilirsiniz.
