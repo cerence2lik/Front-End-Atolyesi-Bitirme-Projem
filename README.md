@@ -17,19 +17,25 @@ Bu proje, kullanıcıların kolayca bilgiye erişmesini sağlamak için tasarlan
 Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 
 📁 img/ → Görsellerin bulunduğu klasör
+
 📁 pdf/ → PDF dosyalarının yer aldığı klasör
+
 📜 blog-cam-tavan.html → Blog sayfası içeriği
+
 📜 güncel-durumlar.html → Güncel bilgiler içeren sayfa
+
 📜 iletisim.html → İletişim sayfası
+
 📜 index.html → Ana sayfa
+
 📜 indexstyle.css → CSS stil dosyası
+
 📜 mesaj_gonderildi.html → Form gönderim sonrası sayfa
+
 📜 script.js → JavaScript fonksiyonları
+
 📜 öne-cikan-kadinlar.html → Öne çıkan kadınlar sayfası
 
-css
-Kopyala
-Düzenle
 
 ## 🛠 Kurulum
 
@@ -38,9 +44,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 1. Depoyu klonlayın:
 git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
-less
-Kopyala
-Düzenle
 2. Proje dizinine gidin ve `index.html` dosyasını bir tarayıcıda açın.
 
 ## 📸 Ekran Görüntüleri
