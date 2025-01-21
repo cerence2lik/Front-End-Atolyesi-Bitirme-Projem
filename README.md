@@ -36,7 +36,6 @@ Proje aşağıdaki dizin ve dosya yapısına sahiptir:
 
 📜 öne-cikan-kadinlar.html → Öne çıkan kadınlar sayfası
 
-
 ## 🛠 Kurulum
 
 Projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
@@ -48,10 +47,9 @@ git clone https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem.git
 
 ## 📸 Ekran Görüntüleri
 
-Proje arayüzü:
-
-![Ana Sayfa][(https://github.com/kullaniciadi/projeadi/blob/main/img/anasayfa.png)](https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png)
-
+**Ana Sayfa Görünümü:**
+![Ana Sayfa](https://github.com/cerence2lik/Front-End-Atolyesi-Bitirme-Projem/blob/main/Ekran%20Resmi%202025-01-21%2013.37.50.png)
 
 ## 📞 İletişim
 Bu proje hakkında daha fazla bilgi almak için [LinkedIn Profilim](https://www.linkedin.com/in/cerencelik2) adresinden bana ulaşabilirsiniz.
+
