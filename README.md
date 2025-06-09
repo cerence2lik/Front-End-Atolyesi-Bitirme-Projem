@@ -1,5 +1,6 @@
 #  Front-End Atölyesi Bitirme Projem 🌸
 Merhaba! 👋 Bu proje, toplumda ve teknolojide cinsiyet eşitliği konusuna dikkat çekmek amacıyla geliştirilmiştir. 
+
 Kadınların başarılarını görünür kılmak ve toplumda farkındalık oluşturmak için tasarlanan bu web projesi, HTML, CSS ve JavaScript kullanılarak oluşturulmuştur.
 
 ## Proje Hakkında 🌍 
